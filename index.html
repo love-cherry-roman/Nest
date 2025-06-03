@@ -9,11 +9,55 @@
             font-style: normal;
             text-align: center;
         }
+        img {
+            width:463px;
+            height:152px;
+        }
+        #milly{
+            display:none;
+            position: static;
+            margin-left:385px;
+            margin-top:-155px;
+        }
+        #explosion {
+            display:none;
+            position: static;
+            margin-left:-75px;
+            margin-top:-155px;
+            width:1500px;
+            height:200px;
+        }
     </style>
     </head>
 <body>
 <h1>Yaoitube</h1>
 <hr>
 <h4>click for gay men kissing😍😍😍</h4>
+
+<img id="queen" onclick="show()" id="gay" src="https://pbs.twimg.com/media/EyECCiIVcAQJ1Mb.jpg">
+
+<img id="milly" src="https://i.kym-cdn.com/photos/images/original/002/598/707/7db.jpg">
+
+<img id="explosion" src="https://s7.ezgif.com/tmp/ezgif-716be5725525a0.gif">
+<script>
+    function sleep(milliseconds) {
+        var start = new Date().getTime();
+        for (var i = 0; i < 1e7; i++) {
+            if ((new Date().getTime() - start) > milliseconds){
+            break;
+            }
+        }
+        }
+    function show(){
+        document.getElementById('explosion')
+            .style.display = "block";
+        
+        document.getElementById('milly')
+            .style.display = "block";
+        document.getElementById('gay')
+            .style.display = "none";
+        
+    }
+</script>
 </body>
 </html>
