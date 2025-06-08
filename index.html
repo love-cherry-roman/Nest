@@ -10,34 +10,43 @@
         font-optical-sizing: auto;
         font-style: normal;
         }
+        body{
+            background-image: url("https://m.media-amazon.com/images/I/81vYmZMz6CL.jpg");
+            background-repeat:repeat;
+            background-size:25%;
+        }
+        .divdiv{
+            background-color:#00000090;
+            margin-left:-100px;
+            margin-right:-100px;
+            margin-top:-30px;
+        }
         #name{
             font-size:45px;
         }
-        .divdiv{
-            background-color:#FFFFFF;
+        .maindiv{
+            margin-top:25px;
+            padding-top:25px;
             width:500px;
             position:absolute;
             left:50%;
             right:50%;
-            transform: translate(-50%);    
-            border: 2px double black;
+            transform: translate(-50%);  
             position: relative;
-            border: 40px solid;
-            border-image: url('https://melokaji.neocities.org/strawberrybacking.png') repeat;
-            border-image-slice: 30;
-            border-image-outset: 10px;
             HEIGHT:50000px;
+            color:white;
         }
-        .maindiv{
-            margin:20px;
-            background-color:#FFFFFF;
-            margin-left:-10px;
-            margin-top:-15px;
+        #icon1{
             width:500px;
             position:absolute;
             left:50%;
             right:50%;
             transform: translate(-50%);
+            color:white;
+            z-index:50;
+            width:25%;
+            height:25%;
+            margin-top:35px;
         }
     </style>
     <meta charset="UTF-8" />
@@ -45,6 +54,7 @@
 </head>
 <body>
     <div class = "divdiv">
+        <img id ='icon1' src="Untitled19_20250607223402.png">
         <div class = "maindiv">
             <h1 id="name">Roman</h1>
         </div>
