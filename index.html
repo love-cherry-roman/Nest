@@ -70,6 +70,33 @@
             width:500px;
             margin-top: 55px;
         }
+        .pfp{
+            position:absolute;
+            z-index: 30;
+            width:250px;
+            height:250px;
+            left:500px;
+            top:150px;
+            border-radius: 50px;
+        }
+        .overlay{
+            opacity:0;
+                        
+            transition: .5s ease;
+        }
+        .pfpall:hover .overlay{
+        opacity:1
+        }
+        .textpfp{
+            font-family: "Archivo Narrow", sans-serif;
+            position: absolute;
+            z-index: 101;
+            color:black;
+            left:575px;
+            font-size: 40px;
+            top:250px;
+            transition: .5s ease;
+        }
     </style>
     <meta charset="UTF-8" />
     <title>title</title>
@@ -78,10 +105,17 @@
     <div class = "divdiv">
         <div class = "maindiv">
             <h1 id="name">Roman</h1>
+            <div class="pfpall">
+                <img class = "pfp" src="rghbgtgtgtg.jpg">
+                <div class="overlay">
+                    <div class="textpfp">Socials</div>
+                </div>
+            </div>
             <h2 id="bio"> 15, INTJ, men liker</h2>
             <img id="starstar" src=Untitled20_20250608163458.png>
             <img id="starstar2" src=Untitled20_20250608163458.png>
             <h1>WIP, im getting to it!</p>
+            
         </div>
     </div>
 </body>
