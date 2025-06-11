@@ -83,24 +83,6 @@
             top:150px;
             border-radius: 50px;
         }
-        .overlay{
-            opacity:0;
-                        
-            transition: .5s ease;
-        }
-        .pfpall:hover .overlay{
-        opacity:1
-        }
-        .textpfp{
-            font-family: "Archivo Narrow", sans-serif;
-            position: absolute;
-            z-index: 101;
-            color:black;
-            left:775px;
-            font-size: 40px;
-            top:250px;
-            transition: .5s ease;
-        }
         .otherbio1{
             font-size: 2em;
             margin-top:-65px;
@@ -138,7 +120,7 @@
             z-index: 109;
             width:230px;
             height:230px;
-            left:350px;
+            left:349px;
             top:55px;
         }
         .loonaicon{
@@ -148,6 +130,65 @@
             width:150px;
             height:150px;
             left:500px;
+        }
+        .textforsocials{
+            position: absolute;
+            z-index: 101;
+            left:745px;
+            height:200px;
+            width:200px;
+            top:175px;
+            opacity:0;
+            transition: opacity 0.5s ease-in;
+        }
+        .overlay:hover .textforsocials{
+            opacity:1;
+            transition: opacity 0.5s ease-in;
+        }
+        .overlay:hover:after .textforsocials{
+            opacity:0;
+        }
+        .tiktok{
+            position:absolute;
+            z-index: 87;
+            width:140px;
+            height:100px;
+            opacity:1;
+            left:775px;
+            opacity:0;
+            top:150px;
+            transition: top 1s ease-out, opacity 1s ease-out;
+            
+        }
+        .overlay:hover .tiktok{
+            opacity:1;
+            top:425px;
+        }
+        
+        .overlay:hover:after .tiktok{
+            opacity:0;
+            top:150px;
+        }
+        .discord{
+            position:absolute;
+            z-index: 87;
+            width:80px;
+            height:80px;
+            opacity:1;
+            left:805px;
+            opacity:0;
+            top:150px;
+            transition: top 1s ease-out, opacity 1s ease-out;
+            
+        }
+        .overlay:hover .discord{
+            opacity:1;
+            top:525px;
+        }
+        
+        .overlay:hover:after .discord{
+            opacity:0;
+            top:150px;
         }
     </style>
     <meta charset="UTF-8" />
@@ -165,12 +206,18 @@
                 <img class="loonaicon" src="loona gifd pls word.gif">
                 <img class = "pfp" src="mmdmdmdmdm.jpg">
                 <div class="overlay">
-                    <div class="textpfp">Socials</div>
+                    <img class="textforsocials" src="text.png" alt="hi">
+                    <a href="https://www.tiktok.com/@love.cherry.abortion">
+                        <img class="tiktok" src="tiktok-removebg-preview (1).png">   
+                    </a>       
+                    <a href="https://discordapp.com/users/832344471555276870">
+                        <img class="discord" src="discord.png">   
+                    </a>           
                 </div>
             </div>
             <h2 id="bio"> 15, INTJ, men liker</h2>
             <h2 class = "otherbio1">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</h2>
-            <h1 class = "otherbio2">It looks bad i KNOW</h1>
+            <h1 class = "otherbio2">Hi</h1>
             
         </div>
     </div>
