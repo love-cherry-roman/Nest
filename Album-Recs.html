@@ -59,6 +59,7 @@ a{
     <img id ="images">
     <br>
     <h3 id="captions"></h3>
+    <h3 id="links"></h3>
 <script>
     const images = [
 
@@ -133,11 +134,50 @@ a{
     "[+ +] - Loona (2018)\n Electropop, K-pop\n Personal fav: favOrite",
         
     ]
+
+    const link = [
+    "Soul lady - Yukika (2020) \n City pop, K-Popm K-rnb, lo-fi \n Personal fav: NEON ",
+    "Pink Tape - f(x) (2013) \n Synth-pop, K-pop, Electro-pop, EDM \n Personal fav: 미행 (그림자:Shadow)",
+    "Heaven or Las Vegas - Cocteau Twins (1990) \n Dream pop, ambient pop, lighter shoegaze \n Personal fav: Frou-Frou Foxes in Midsummer Fires ",
+    "Random Thoughts - Faye Wong (1994) \n Alternative rock, Dream pop, Cantopop \n Personal fav: 知己知彼",
+    "Imaginal disk - Magdalena bay (2024) \n Synth-pop, Dance-pop, Electro-rock, Electro-pop \n Personal fav: Vampire in the Corner",
+    "Fancy that - Pinkpantheress (2025) \n Synth-pop, UK Garage \n Personal fav: Stars",
+    "Product - Sophie (2015) \n Experimental-pop, hyperpop, Bubblegum-pop, avant-pop\n Personal fav: Hard",
+    "Amber - Autechre (1994) \n Ambient, IDM \n Personal fav: Yulquen",
+    "The Family Jewels - Marina and the diamons (2010) \n Alt-pop, bubblegum-punk, synth-pop \n Personal fav: Shampain",
+    "À peu près - Pomme (2017) \n Folk rock, chanson francaise, indie pop \n Personal fav: On brûlera",
+    "Mix & Match - Loona Odd eye circle (2017)\n Dance-pop, K-pop, future bass\n Personal fav: Girl Front ",
+    "Caligula - Lingua Ignota (2019)\n Dark wave, Noise, Industrial\n Personal fav: May Failure Be Your Noose",
+    "Fragmented - Up Dharma Down (2006)\n Indie Rock, Pinoy Indie\n Personal fav: Layag",
+    "crystallized - Camellia (2015)\n J-core, EDM, Drum & bass, speedcore \n Personal fav: light it up",
+    "Ray of light - Madonna (1998)\n Electronica, Trip-hop, new-age \n Personal fav: Skin",
+    "Preacher's Daughter - Ethel cain (2022) \n Dark ambient, americana\n Personal fav: Thoroughfare",
+    "Spectrum - Seedbean (2022) \n Speedcore, Extratone, Machine-core \n Personal fav: Rush in universe",
+    "Souled out - Jhene Aiko (2014)\n Alternative R&B, neo-soul\n Personal fav: Blue dream",
+    "The money store - Death Grips (2012) \n Experimental hip hop, hardcore hip hip, industrial\n Personal fav: the fever",
+    "Homogenic - Bjork (1997) \n Electronice, Trip-hop, Art-pop \n Personal fav: hunter",
+    "Selected Ambient Works 85-92 (1992) \n Ambient techno, IDM, electronica \n Personal fav: Pulsewidth",
+    "Debut - Bjork (1993) \n Alt-indie, art-pop, electropop \n Personal fav: come to me",
+    "A Night at the Symphony - Laufey (2023) \n Orchestra \n Personal fav: Every time we say goodbye",
+    "How I'm Feeling Now - Charli xcx (2020) \n Hyperpop, electropop, experimental pop \n Personal fav: Visions",
+    "Laurel Hell - Mitski (2022) \n Synth-pop, Indie-pop, Electro-pop \n Personal fav: Valentine, Texas",
+    "Irony - ACO (2003) \n Exmperimental, Ambient, Electronica, J-pop, Art-pop\n Personal fav: Kitchen",
+    "Titanic Rising - Weyes Blood (2019) \n Chamber pop, Soft rock, baroque \n Personal fav: Everyday",
+    "Kick III - Arca (2021)\n Electronic, DEconstructed club, Cumbia, Psychadelic\n Persobal fav: Bruja",
+    "Motomami - Rsoalia (2022) \n Experimental pop, Alternative Reggaeton \n Personal Fav: Cuuuuuuuuuute",
+    "Caprisongs - FKA Twigs (2022) \n Art-pop, Avant-pop, R&B \n Personal fav: Pamplemousse",
+    "Vulnicura - Bjork (2015)\n Electronic- Avant-garde, ambient\n Personal fav: Black Lake",
+    "Right Place, Wrong person - RM (2024)\n k-pop, k-r&b, k-rap\nPersonal fav: Groin",
+    "[+ +] - Loona (2018)\n Electropop, K-pop\n Personal fav: favOrite",
+        
+    ]
     
     function getRandom() {
       const rnd = Math.floor(Math.random() * images.length);
       const captions = document.querySelector("#captions");
       captions.innerHTML = caption[rnd];
+      const links = document.querySelector("#links");
+      links.innerHTML = link[rnd];
       return images[rnd];
     }
 
