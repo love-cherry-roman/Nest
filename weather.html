@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather App</title>
+    <style>
+        body {
+            font-family: SansSerif, Arial, sans-serif;
+            background-color: #f5f5ff;
+        }
+        #frame {
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            left: 430px;
+            top: 100px;
+            border: 1px solid #ccc;
+            background-color: #f5f5ff;
+        }
+        #panel {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            padding-bottom: 400px;
+            height: 100%;
+            box-sizing: border-box;
+        }
+        #label {
+            font-weight: bold;
+            font-size: 16px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        #textfield {
+            height: 30px;
+            font-size: 14px;
+            margin-bottom: 10px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        #enter {
+            font-weight: bold;
+            font-size: 14px;
+            background-color: #6495ed;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            align-self: center;
+        }
+        #weatherPanel {
+            background-color: #e6f0ff;
+            padding: 10px 20px 20px 20px;
+            border-radius: 5px;
+            margin-top: 10px;
+            flex-grow: 1;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div id="frame">
+        <div id="panel">
+            <label id="label">pick a city!</label>
+            <input type="text" id="textfield" maxlength="20">
+            <button id="enter">Enter</button>
+            <div id="weatherPanel"></div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('enter').addEventListener('click', async () => {
+            const location = document.getElementById('textfield').value.trim();
+            if (location.toLowerCase() === "no") {
+                window.close();
+                return;
+            }
+
+            const locData = await getLocationData(location);
+            if (!locData) {
+                alert("Location not found.");
+                return;
+            }
+
+            const latitude = locData.latitude;
+            const longitude = locData.longitude;
+
+            try {
+                const url = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`;
+                const response = await fetch(url);
+                if (!response.ok) {
+                    console.log("Error: Could not connect to API");
+                    return;
+                }
+
+                const json = await response.json();
+                const weather = json.current_weather;
+
+                const time = weather.time;
+                const temperature = weather.temperature;
+                const windSpeed = weather.windspeed;
+
+                const weatherInfo = `
+                    <b>Weather Info:</b><br>
+                    Time: ${time}<br>
+                    Temperature: ${temperature} °C<br>
+                    Wind Speed: ${windSpeed} km/h
+                `;
+
+                const weatherPanel = document.getElementById('weatherPanel');
+                weatherPanel.innerHTML = weatherInfo;
+
+            } catch (err) {
+                console.error(err);
+            }
+        });
+
+        async function getLocationData(location) {
+            const formattedLocation = location.replaceAll(" ", "+");
+            const url = `https://geocoding-api.open-meteo.com/v1/search?name=${formattedLocation}&count=1&language=en&format=json`;
+
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    console.log("Error: Location API failed");
+                    return null;
+                }
+                const json = await response.json();
+                return json.results[0];
+            } catch (err) {
+                console.error(err);
+                return null;
+            }
+        }
+    </script>
+</body>
+</html>
