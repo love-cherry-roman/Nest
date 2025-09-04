@@ -121,12 +121,18 @@
                 const temperature = weather.temperature;
                 const windSpeed = weather.windspeed;
 
+                const americanTemp = Math.floor(((temperature * 1.8)+32)*100)/100;
+                const americanMile = Math.floor((windSpeed/1.609) * 100)/100;
+
+
                 const weatherInfo = `
                     <b>Weather Info:</b><br>
-                    Time: ${time}<br>
-                    Temperature: ${temperature} °C<br>
-                    TempuratureF: ${(((temperature * 9/5)+32)*100)/100} °F<br>
-                    Wind Speed: ${windSpeed} km/h
+                    Date: ${time.slice(0,10)}<br>
+                    Time: ${time.slice(11,16)}<br>
+                    Temperature (C): ${temperature} °C<br>
+                    Tempurature (F): ${americanTemp} °F<br>
+                    Wind Speed (Kilometers): ${windSpeed} km/h<br>
+                    Wind Speed (Miles): ${americanMile} Mph
                 `;
 
                 const weatherPanel = document.getElementById('weatherPanel');
