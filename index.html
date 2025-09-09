@@ -102,7 +102,8 @@ body {
 .overlay:hover .textforsocials,
 .overlay:hover .tiktok,
 .overlay:hover .discord,
-.overlay:hover .github {
+.overlay:hover .github,
+.overlay:hover .sitelist{
     opacity: 1;
 }
 
@@ -117,7 +118,7 @@ body {
     transition: opacity 0.5s ease-in;
 }
 
-.tiktok, .discord, .github {
+.tiktok, .discord, .github, .sitelist {
     position: absolute;
     z-index: 87;
     opacity: 0;
@@ -133,7 +134,7 @@ body {
 }
 
 .overlay:hover .tiktok {
-    top: 400px;
+    top: 430px;
 }
 
 .discord {
@@ -144,7 +145,7 @@ body {
 }
 
 .overlay:hover .discord {
-    top: 500px;
+    top: 530px;
 }
 
 .github {
@@ -155,7 +156,18 @@ body {
 }
 
 .overlay:hover .github {
-    top: 585px;
+    top: 625px;
+}
+
+.sitelist {
+    width: 80px;
+    height: 70px;
+    left: 730px;
+    top: 125px;
+}
+
+.overlay:hover .sitelist {
+    top: 735px;
 }
 
 @media screen and (max-width: 768px) {
@@ -173,12 +185,27 @@ body {
     }
 }
 #text-divider{
-    position: fixed;
+    position: absolute;
     top:375px;
     left:190px;
     max-width: max-content;
     color:white;
 
+}
+#true-bio{
+    position: absolute;
+    top:400px;
+    left:300px;
+    width: 350px;
+    color:white;
+    font-size:35px;
+
+}
+.cbox{
+    position:absolute;
+    left:700px;
+    top:450px;
+    height:350px;
 }
 
         
@@ -188,7 +215,9 @@ body {
 </head>
 <body>
     <h3 id="text-divider">︶⊹︶︶୨୧︶︶⊹︶︶⊹︶︶୨୧︶︶⊹︶︶⊹︶︶୨୧︶︶⊹︶︶⊹︶︶୨୧︶︶⊹︶︶⊹︶︶୨୧︶︶⊹︶</h3>
-            
+    <h3 id="true-bio">hello, i'm roman, i like programming and web design and music, i like Touhou, NG:Evangelion, MahoYome, and kpop and stuff and stuff<br>  stan loona & praise seedbean</h3>
+
+    <iframe class = "cbox" src="https://my.cbox.ws/ChatMeEirin"> </iframe>
     <div class = "divdiv">
         <div class = "maindiv">
             <div class="divvydiv">
@@ -200,7 +229,7 @@ body {
                 </div>
 
                 <div class="pfpall">
-                    <img class = "pfp" src="mmdmdmdmdm.jpg">
+                    <img class = "pfp" src="my man.png">
                     <div class="overlay">
                         <img class="textforsocials" src="text.png" alt="hi">
                         <a href="https://www.tiktok.com/@love.cherry.abortion">
@@ -212,7 +241,10 @@ body {
                         </a>        
                         <a href="https://github.com/love-cherry-roman">
                             <img class="github" src="gitforreal.png">   
-                        </a>         
+                        </a>           
+                        <a href="https://love-cherry-roman.github.io/Nest/list">
+                            <img class="sitelist" src="Untitled38_20250908220511.png">   
+                        </a>       
                     </div>
                 </div>
                 <div class = "erythingelse">
