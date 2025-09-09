@@ -2,6 +2,8 @@
 <html>
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Big+Shoulders:opsz,wght@10..72,100..900&family=Comfortaa:wght@300..700&family=Corben:wght@400;700&display=swap" rel="stylesheet">   <style>
         
@@ -17,6 +19,7 @@ body {
     background-image: url("https://m.media-amazon.com/images/I/81vYmZMz6CL.jpg");
     background-repeat: repeat;
     background-size: 25%;
+    align-self: center;
 }
 
 .divdiv {
@@ -24,14 +27,14 @@ body {
     margin-top:-10px;
     margin-left:-30px;
     margin-right:-100px;
+    height:10000px;
 }
 
 #name {
     font-size: 10.5em;
     margin-bottom: -50px;
     margin-top: 75px;
-    margin-left: -900px;
-    left:-900px;
+    margin-left: 10px;
 }
 
 .maindiv {
@@ -56,19 +59,19 @@ body {
     z-index: 30;
     width: 250px;
     height: 250px;
-    left: 100px;
+    left: 725px;
     top: 150px;
     border-radius: 50px;
 }
 
 .pfpall {
-    left:125px;
+    left:130px;
     position: absolute;
     top: -20px;
 }
 
 #namesandsuch {
-    left:1125px;
+    left:1150px;
     position: absolute;
     top:30px;
 }
@@ -175,7 +178,7 @@ body {
 #text-divider{
     position: absolute;
     top:375px;
-    left:33%;
+    left:850px;
     max-width: max-content;
     color:white;
 
@@ -183,7 +186,7 @@ body {
 #true-bio{
     position: absolute;
     top:400px;
-    left:38%;
+    left:950px;
     width: 350px;
     color:white;
     font-size:35px;
@@ -191,7 +194,7 @@ body {
 }
 .cbox{
     position:absolute;
-    left:52%;
+    left:1325px;
     top:450px;
     height:350px;
 }
@@ -200,9 +203,22 @@ h1, h2, h3, h4, h5, h6, a{
 }
 .erythingelse{
     position: absolute;
-    left:33%;
+    left:850px;
 }
-
+@media (max-width: 768px) {
+  .divdiv{
+    width:500%;
+  }
+  .pfpall{
+    left:-600px;
+  }
+  .divvydiv{
+    left:-600px;
+  }
+  #truebio{
+    left:500
+  }
+}
         
     </style>
     <meta charset="UTF-8" />
