@@ -1,0 +1,321 @@
+h1, h2, h3,h4 ,h5 ,h6,p,a,b  {
+            font-family: "Archivo Narrow", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
+        body{
+            background-image: url("https://m.media-amazon.com/images/I/81vYmZMz6CL.jpg");
+            background-repeat:repeat;
+            background-size:25%;
+        }
+        .divdiv{
+            background-color:#00000090;
+            margin-left:-100px;
+            margin-right:-100px;
+            margin-top:-30px;
+        }
+        #name{
+            font-size:175px;
+            margin-bottom:-50px;
+            margin-top: 75px;
+            margin-left:10px;
+        }
+        .maindiv{
+            margin-top:-100px;
+            padding-top:25px;
+            width:475px;
+            position:static;
+            margin:auto;
+            left:50%;
+            right:50%;
+            transform: translate(-50%);  
+            HEIGHT:50000px;
+            color:white;
+            top:-100px;
+        }
+        #icon1{
+            width:500px;
+            position:absolute;
+            left:50%;
+            right:50%;
+            transform: translate(-50%);
+            color:white;
+            z-index:50;
+            width:25%;
+            height:25%;
+            margin-top:35px;
+        }
+        #starstar{
+            margin-top:-130px;
+            margin-bottom:-170px;
+            margin-left:-40px;
+            height:250px;
+            position:absolute;
+            z-index: 54;
+            
+        }
+        #starstar2{
+            
+            margin-top:-85px;
+            margin-bottom:-200px;
+            margin-left:40px;
+            position: absolute;
+            z-index: 34;
+            height:250px;
+        }
+        #bio{
+            font-size: 4.25em;
+            width:500px;
+            margin-top: 50px;
+            top:290px;
+            position: absolute;
+        }
+        .pfp{
+            position:absolute;
+            z-index: 30;
+            width:300px;
+            height:300px;
+            left:700px;
+            top:150px;
+            border-radius: 50px;
+        }
+        .otherbio1{
+            font-size: 2em;
+            margin-top:-35px;
+            margin-bottom:-25px;
+            top:475px;
+            
+            position:absolute;
+        }
+        .otherbio2{
+            font-size: 50px;
+            z-index: 74;
+            width:400px;
+            top:435px;
+            position: absolute;
+        }
+        .arrow-me{
+            width:150px;
+            height:150px;
+            position:absolute;
+            z-index: 93;
+            left:550px;
+            top:150px;
+        }
+        .starsyayaya{
+            width:190px;
+            height:190px;
+            position:absolute;
+            z-index: 92;
+            left:-31px;
+            top:110px;
+        }
+        .star1{
+            position:absolute;
+            z-index: 109;
+            width:145px;
+            height:145px;
+            left:200px;
+            top:250px;
+        }
+        .staragain{
+            position:absolute;
+            z-index: 109;
+            width:220px;
+            height:220px;
+            left:370px;
+            top:35px;
+        }
+        .loonaicon{
+            
+            position:absolute;
+            z-index: 102;
+            width:150px;
+            height:150px;
+            left:500px;
+            top:300px;
+        }
+        .textforsocials{
+            position: absolute;
+            z-index: 101;
+            left:745px;
+            height:200px;
+            width:200px;
+            top:175px;
+            opacity:0;
+            transition: opacity 0.5s ease-in;
+        }
+        .overlay:hover .textforsocials{
+            opacity:1;
+            transition: opacity 0.5s ease-in;
+        }
+        .overlay:hover:after .textforsocials{
+            opacity:0;
+        }
+        .tiktok{
+            position:absolute;
+            z-index: 87;
+            width:140px;
+            height:100px;
+            opacity:1;
+            left:850px;
+            opacity:0;
+            top:175px;
+            transition: top 1s ease-out, opacity 1s ease-out;
+            
+        }
+        .overlay:hover .tiktok{
+            opacity:1;
+            top:475px;
+            
+        }
+        
+        .overlay:hover:after .tiktok{
+            opacity:0;
+            top:150px;
+        }
+        .discord{
+            position:absolute;
+            z-index: 87;
+            width:80px;
+            height:80px;
+            opacity:1;
+            left:875px;
+            opacity:0;
+            top:150px;
+            transition: top 1s ease-out, opacity 1s ease-out;
+            
+        }
+        .overlay:hover .discord{
+            opacity:1;
+            top:625px;
+        }
+        
+        .overlay:hover:after .discord{
+            opacity:0;
+            top:150px;
+        }
+        .github{
+            position:absolute;
+            z-index: 87;
+            width:80px;
+            height:80px;
+            opacity:1;
+            left:875px;
+            opacity:0;
+            top:150px;
+            transition: top 1s ease-out, opacity 1s ease-out;
+            
+        }
+        .overlay:hover .github{
+            opacity:1;
+            top:775px;
+        }
+        
+        .overlay:hover:after .github{
+            opacity:0;
+            top:150px;
+        }
+        .spotifyplaylist{
+            width:660px;
+            height:250px;
+            position: absolute;
+            z-index: 44;
+            top:625px;
+        }
+        #dividerthing{
+            top:575px;
+            position:absolute;
+            width:1000px;
+        }
+        .loonathingv{
+            position:absolute;
+            z-index: 89;
+            border: 5px white solid;
+            width:120px;
+            left:700px;
+            top:450px;
+        }
+        .topbar{
+            height:200px;
+            background-color: rgb(34, 34, 34);
+            width:1150px;
+            margin:auto;
+            left:500px;
+        }
+        .divvydiv{
+            top:-75px;
+            position:absolute;
+            left:25px;
+    
+        }
+        .titleforbar{
+            text-align: center;
+            font-size: 50px;
+            color:white;
+        }
+        .dividerforbar{
+            font-size: 50px;
+            position: absolute;
+            z-index: 101;
+            color:white;
+            top:0px;
+        }
+        .home{
+            font-size: 35px;
+            position: static;
+            z-index: 101;
+            color:white;
+            top:70px;
+            left:400px;
+            font-weight: 100;
+            margin-bottom:-35px;
+            margin-top:-25px;
+            margin-left: 150px;
+        }
+        .list{
+            font-size: 40px;
+            position: absolute;
+            z-index: 101;
+            color:white;
+            font-weight: 100;
+            width:400px;
+            top:1000px;
+        }
+        #socialss{
+            position: absolute;
+            z-index: 89;
+            left:760px;
+            top:80px;
+            width:500px;
+        }
+        .eliasthingowa{
+            width:150px;
+            height:150px;
+            border:white 5px solid;
+            border-radius: 25%;
+            position: absolute;
+            z-index: 34;
+            top:425px;
+            left:500px;
+        }
+        .stargif{
+            width:150px;
+            height:150px;
+            position: absolute;
+            z-index: 34;
+            top:425px;
+            left:350px;
+        }
+        .namediv{
+          position: absolute;
+          top:30px;
+        }
+        #cbox{
+          position: absolute;
+          width:430px;
+          height:550px;
+          font-size: 75px;
+          left:450px;
+          top:400px;
+        }
