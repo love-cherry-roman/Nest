@@ -2,330 +2,326 @@
 <html>
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Big+Shoulders:opsz,wght@10..72,100..900&family=Comfortaa:wght@300..700&family=Corben:wght@400;700&display=swap" rel="stylesheet">   <style>
+        h1, h2, h3,h4 ,h5 ,h6,p,a,b  {
+            font-family: "Archivo Narrow", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
+        body{
+            background-image: url("https://m.media-amazon.com/images/I/81vYmZMz6CL.jpg");
+            background-repeat:repeat;
+            background-size:25%;
+        }
+        .divdiv{
+            background-color:#00000090;
+            margin-left:-100px;
+            margin-right:-100px;
+            margin-top:-30px;
+        }
+        #name{
+            font-size:10.5em;
+            margin-bottom:-50px;
+            margin-top: 75px;
+            margin-left:10px;
+        }
+        .maindiv{
+            margin-top:-100px;
+            padding-top:25px;
+            width:475px;
+            position:static;
+            margin:auto;
+            left:50%;
+            right:50%;
+            transform: translate(-50%);  
+            HEIGHT:50000px;
+            color:white;
+            top:-100px;
+        }
+        #icon1{
+            width:500px;
+            position:absolute;
+            left:50%;
+            right:50%;
+            transform: translate(-50%);
+            color:white;
+            z-index:50;
+            width:25%;
+            height:25%;
+            margin-top:35px;
+        }
+        #starstar{
+            margin-top:-130px;
+            margin-bottom:-170px;
+            margin-left:-40px;
+            height:250px;
+            position:absolute;
+            z-index: 54;
+            
+        }
+        #starstar2{
+            
+            margin-top:-85px;
+            margin-bottom:-200px;
+            margin-left:40px;
+            position: absolute;
+            z-index: 34;
+            height:250px;
+        }
+        #bio{
+            font-size: 4.25em;
+            width:500px;
+            margin-top: 50px;
+        }
+        .pfp{
+            position:absolute;
+            z-index: 30;
+            width:250px;
+            height:250px;
+            left:725px;
+            top:150px;
+            border-radius: 50px;
+        }
+        .otherbio1{
+            font-size: 2em;
+            margin-top:-65px;
+            margin-bottom:-25px;
+        }
+        .otherbio2{
+            font-size: 14ps;
+            position:absolute;
+            z-index: 74;
+            width:400px;
+        }
+        .arrow-me{
+            width:150px;
+            height:150px;
+            position:absolute;
+            z-index: 93;
+            left:600px;
+            top:175px;
+        }
+        .starsyayaya{
+            width:185px;
+            height:185px;
+            position:absolute;
+            z-index: 92;
+            left:-31px;
+            top:133px;
+        }
+        .star1{
+            position:absolute;
+            z-index: 109;
+            width:145px;
+            height:145px;
+            left:200px;
+            top:250px;
+        }
+        .staragain{
+            position:absolute;
+            z-index: 109;
+            width:230px;
+            height:230px;
+            left:349px;
+            top:55px;
+        }
+        .loonaicon{
+            
+            position:absolute;
+            z-index: 102;
+            width:150px;
+            height:150px;
+            left:500px;
+        }
+        .textforsocials{
+            position: absolute;
+            z-index: 101;
+            left:745px;
+            height:200px;
+            width:200px;
+            top:175px;
+            opacity:0;
+            transition: opacity 0.5s ease-in;
+        }
+        .overlay:hover .textforsocials{
+            opacity:1;
+            transition: opacity 0.5s ease-in;
+        }
+        .overlay:hover:after .textforsocials{
+            opacity:0;
+        }
+        .tiktok{
+            position:absolute;
+            z-index: 87;
+            width:140px;
+            height:100px;
+            opacity:1;
+            left:850px;
+            opacity:0;
+            top:175px;
+            transition: top 1s ease-out, opacity 1s ease-out;
+            
+        }
+        .overlay:hover .tiktok{
+            opacity:1;
+            top:450px;
+            
+        }
         
-
+        .overlay:hover:after .tiktok{
+            opacity:0;
+            top:150px;
+        }
+        .discord{
+            position:absolute;
+            z-index: 87;
+            width:80px;
+            height:80px;
+            opacity:1;
+            left:875px;
+            opacity:0;
+            top:150px;
+            transition: top 1s ease-out, opacity 1s ease-out;
+            
+        }
+        .overlay:hover .discord{
+            opacity:1;
+            top:600px;
+        }
         
-        h1, h2, h3, h4, h5, h6, p, a, b {
-    font-family: "Archivo Narrow", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-}
-
-body {
-    background-image: url("https://m.media-amazon.com/images/I/81vYmZMz6CL.jpg");
-    background-repeat: repeat;
-    background-size: 25%;
-    align-self: center;
-}
-
-.divdiv {
-    background-color: #00000090;
-    margin-top:-10px;
-    margin-left:-30px;
-    margin-right:-100px;
-    height:10000px;
-}
-
-#name {
-    font-size: 10.5em;
-    margin-bottom: -50px;
-    margin-top: 75px;
-    margin-left: 10px;
-}
-
-.maindiv {
-    margin-top: -100px;
-    padding-top: 25px;
-    width: 475px;
-    margin: auto;
-    transform: translate(-50%);
-    color: white;
-}
-
-#bio {
-    font-size: 4.25em;
-    width: 500px;
-    top: 250px;
-    left: 300px;
-    position: absolute;
-}
-
-.pfp {
-    position: absolute;
-    z-index: 30;
-    width: 250px;
-    height: 250px;
-    left: 725px;
-    top: 150px;
-    border-radius: 50px;
-}
-
-.pfpall {
-    left:130px;
-    position: absolute;
-    top: -20px;
-}
-
-#namesandsuch {
-    left:1050px;
-    position: absolute;
-    top:30px;
-}
-
-.star1, .starsyayaya, .staragain {
-    position: absolute;
-    z-index: 109;
-}
-
-.star1 {
-    width: 145px;
-    height: 145px;
-    left: 200px;
-    top: 250px;
-}
-
-.starsyayaya {
-    width: 185px;
-    height: 185px;
-    left: -30px;
-    top: 109px;
-    z-index: 92;
-}
-
-.staragain {
-    width: 230px;
-    height: 230px;
-    left: 349px;
-    top: 30px;
-}
-
-.overlay:hover .textforsocials,
-.overlay:hover .tiktok,
-.overlay:hover .discord,
-.overlay:hover .github,
-.overlay:hover .sitelist{
-    opacity: 1;
-}
-
-.textforsocials {
-    position: absolute;
-    z-index: 101;
-    left: 745px;
-    height: 200px;
-    width: 200px;
-    top: 175px;
-    opacity: 0;
-    transition: opacity 0.5s ease-in;
-}
-
-.tiktok, .discord, .github, .sitelist {
-    position: absolute;
-    z-index: 87;
-    opacity: 0;
-    transition: top 1s ease-out, opacity 1s ease-out;
-    left:-50px;
-}
-
-.tiktok {
-    width: 140px;
-    height: 100px;
-    left: 700px;
-    top: 175px;
-}
-
-.overlay:hover .tiktok {
-    top: 430px;
-}
-
-.discord {
-    width: 80px;
-    height: 80px;
-    left: 730px;
-    top: 150px;
-}
-
-.overlay:hover .discord {
-    top: 530px;
-}
-
-.github {
-    width: 80px;
-    height: 80px;
-    left: 730px;
-    top: 125px;
-}
-
-.overlay:hover .github {
-    top: 625px;
-}
-
-.sitelist {
-    width: 80px;
-    height: 70px;
-    left: 730px;
-    top: 125px;
-}
-
-.overlay:hover .sitelist {
-    top: 735px;
-}
-
-
-#text-divider{
-    position: absolute;
-    top:375px;
-    left:850px;
-    max-width: max-content;
-    color:white;
-
-}
-#true-bio{
-    position: absolute;
-    top:400px;
-    left:950px;
-    width: 350px;
-    color:white;
-    font-size:35px;
-
-}
-.cbox{
-    position:absolute;
-    left:1325px;
-    top:450px;
-    height:350px;
-}
-h1, h2, h3, h4, h5, h6, a{
-    color:white;
-}
-.erythingelse{
-    position: absolute;
-    left:850px;
-}
-@media (max-width: 768px) {
-  .divdiv{
-    width:500%;
-  }
-  .pfpall{
-    position:absolute;
-    left:-625px;
-    size:100%;
-  }
-  .divvydiv{
-    left:-600px;
-  }
-  #truebio{
-    position:static;
-    left:500
-  }
-  #namesandsuch{
-    left:1px;
-  }
-  .pfp{
-    width:500px;
-    height:500px;
-    border-radius:20%;
-  }
-  .textforsocials, .overlay{
-    width:500px;
-    height:500px;
-  }
-  .tiktok{
-    width:350px;
-    height:250px;
-    left:650px;
-  }
-  .overlay:hover .tiktok {
-    top: 730px;
-  }
-  .discord{
-    width:200px;
-    height:200px;
-  }
-  .overlay:hover .discord{
-    top:950px;
-  }
-  .github{
-    width:200px;
-    height:200px;
-  }
-  .overlay:hover .github{
-    top:1200px;
-  }
-  .sitelist{
-    width:200px;
-    height:150px;
-  }
-  .overlay:hover .sitelist{
-    top:1500px;
-  }
-  #namesandsuch{
-    left:1300px;
+        .overlay:hover:after .discord{
+            opacity:0;
+            top:150px;
+        }
+        .github{
+            position:absolute;
+            z-index: 87;
+            width:80px;
+            height:80px;
+            opacity:1;
+            left:875px;
+            opacity:0;
+            top:150px;
+            transition: top 1s ease-out, opacity 1s ease-out;
+            
+        }
+        .overlay:hover .github{
+            opacity:1;
+            top:750px;
+        }
+        
+        .overlay:hover:after .github{
+            opacity:0;
+            top:150px;
+        }
+        .spotifyplaylist{
+            width:660px;
+            height:250px;
+            position: absolute;
+            z-index: 44;
+            top:625px;
+        }
+        #dividerthing{
+            top:575px;
+            position:absolute;
+            width:1000px;
+        }
+        .loonathingv{
+            position:absolute;
+            z-index: 89;
+            border: 5px white solid;
+            width:120px;
+            left:700px;
+            top:450px;
+        }
+        .topbar{
+            height:200px;
+            background-color: rgb(34, 34, 34);
+            width:1150px;
+            margin:auto;
+            left:500px;
+        }
+        .divvydiv{
+            top:-75px;
+            position:absolute;
+            left:25px;
     
-  }
-  #name{
-    font-size: 250px;
-  }
-  .star1, .starsyayaya, .staragain{
-    visibility: hidden;
-  }
-  #text-divider{
-    width:1500px;
-    left:75px;
-    top:675px;
-    position:absolute;
-    z-index: 67;
-    font-size: 32px;
-}
-  #true-bio{
-    left:400px;
-    font-size: 95px;
-    position: absolute;
-    z-index: 5;
-    width:1100px;
-    top:700px;
-  }
-  .cbox{
-    position: absolute;
-    top:1700px;
-    width:1000px;
-    left:100px;
-    height:900px;
-  }
-  #bio{
-    top:350px;
-    left:-35px;
-    font-size: 150px;
-  }
-  #spotify{
-    position: absolute;
-    width:500px;
-    height:500px;
-  }
-}
-        
+        }
+        .titleforbar{
+            text-align: center;
+            font-size: 50px;
+            color:white;
+        }
+        .dividerforbar{
+            font-size: 50px;
+            position: absolute;
+            z-index: 101;
+            color:white;
+            top:0px;
+        }
+        .home{
+            font-size: 35px;
+            position: static;
+            z-index: 101;
+            color:white;
+            top:70px;
+            left:400px;
+            font-weight: 100;
+            margin-bottom:-35px;
+            margin-top:-25px;
+            margin-left: 150px;
+        }
+        .list{
+            font-size: 40px;
+            position: absolute;
+            z-index: 101;
+            color:white;
+            font-weight: 100;
+            width:400px;
+            top:775px;
+        }
+        #socialss{
+            position: absolute;
+            z-index: 89;
+            left:760px;
+            top:90px;
+        }
+        .eliasthingowa{
+            width:150px;
+            height:150px;
+            border:white 5px solid;
+            border-radius: 25%;
+            position: absolute;
+            z-index: 34;
+            top:425px;
+            left:500px;
+        }
+        .stargif{
+            width:150px;
+            height:150px;
+            position: absolute;
+            z-index: 34;
+            top:425px;
+            left:350px;
+        }
     </style>
     <meta charset="UTF-8" />
     <title>title</title>
 </head>
 <body>
-    <div class = "thediv">
-        <h3 id="text-divider">︶⊹︶︶୨୧︶︶⊹︶︶⊹︶︶୨୧︶︶⊹︶︶⊹︶︶୨୧︶︶⊹︶︶⊹︶︶୨୧︶︶⊹︶︶⊹︶︶୨୧︶︶⊹︶</h3>
-        <h3 id="true-bio">hello, i'm roman, i like programming and web design and music, i like Touhou, NG:Evangelion, MahoYome, and kpop and stuff and stuff<br>  stan loona & praise seedbean</h3>
-            
-                
-
+    <div class = "divdiv">
+        <div class = "maindiv">
+            <div class="divvydiv">
+                <h1 id="name">Roman</h1>
+                <img class="star1" src="staragainyayahhujfuoh.png">
+                <img class = "starsyayaya" src="saaaaiuohiohhio.png">
+                <img class="staragain" src="Untitled21_20250610205815.png">
                 <div class="pfpall">
-                    <div id="namesandsuch">
-                    <h1 id="name">Roman</h1>
-                    <img class="star1" src="staragainyayahhujfuoh.png">
-                    <img class = "starsyayaya" src="saaaaiuohiohhio.png">
-                    <img class="staragain" src="Untitled21_20250610205815.png">
-                </div>
-                    <img class = "pfp" src="my man.png">
+                    <img class="arrow-me" src="Untitled21_20250610201932.png">
+                    <img class="loonaicon" src="loona gifd pls word.gif">
+                    <h1 class = "otherbio" id="socialss">click 4 socials</h1>
+                    <img class = "pfp" src="mmdmdmdmdm.jpg">
                     <div class="overlay">
                         <img class="textforsocials" src="text.png" alt="hi">
                         <a href="https://www.tiktok.com/@love.cherry.abortion">
@@ -337,27 +333,20 @@ h1, h2, h3, h4, h5, h6, a{
                         </a>        
                         <a href="https://github.com/love-cherry-roman">
                             <img class="github" src="gitforreal.png">   
-                        </a>           
-                        <a href="https://love-cherry-roman.github.io/Nest/list">
-                            <img class="sitelist" src="Untitled38_20250908220511.png">   
-                        </a>       
+                        </a>         
                     </div>
                 </div>
-                <div class = "erythingelse">
-                    <h2 id="bio"> 15, INTJ</h2>
-                    </div>
-                    
-                
+                <h2 id="bio"> 15, INTJ</h2>
+                <h2 class = "otherbio1">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</h2>
+                <h1 class = "otherbio2">Hi I'm roman uhhhh i like kpop and coding and stuff, i ult loona, f(x), sistar, nmixx, and others, hmu huzz </h1>
+                <img class="eliasthingowa" src="avatarhd.jpg"> 
+                <img class="stargif" src="starsyaayaaaaaaayyyayyayyayay.gif">
+                <img class = "loonathingv" src="dwwwwwwwwwwwwwwwwwww.jpg">
+                <h2 class="list"></h2><a class="list" href="https://love-cherry-roman.github.io/Nest/list">list for all my sites</a></h2>
+                <h2 id="dividerthing">-----------------------------------------------------------------------------------------------------</h2> 
+                <iframe class="spotifyplaylist" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/45lu12ekmEjUd2bwJiTqR0?utm_source=generator" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>           
+            </div>
         </div>
-    <iframe class = "cbox" src="https://my.cbox.ws/ChatMeEirin"> </iframe>
-    <div class = "divdiv">
-        <div class = "maindiv">
-
-
-
-            
-    </div>
-    </div>
     </div>
 </body>
 </html>
