@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>Weather App</title>
             <style>
+                *{
+                    zoom: 105%;
+                }
         body {
             font-family: SansSerif, Arial, sans-serif;
             background-color: #f5f5ff;
@@ -15,7 +18,7 @@
             min-height: 100vh;
         }
 
-        h2 {
+        #thebigone h2 {
             margin-top: 40px;
             font-family: sans-serif;
             color: #4a76c3;
@@ -25,7 +28,7 @@
 
         #frame {
             width: 500px;
-            height: 500px;
+            height: 750px;
             margin-top: 40px;
             border: 1px solid #ccc;
             background-color: #f5f5ff;
@@ -74,6 +77,17 @@
             flex-grow: 1;
             font-size: 14px;
         }
+        #weatherPanel img{
+            margin-left:170px;
+            margin-top:-140px;
+        }
+        #weatherPanel h2{
+            margin-top: 0px;
+            font-family: sans-serif;
+            color: #000000;
+            text-align: left;
+            font-size: 150%;
+        }
     </style>
 </head>
 <body>
@@ -84,7 +98,8 @@
             <label id="label">pick a city!</label>
             <input type="text" id="textfield" maxlength="20">
             <button id="enter">Enter</button>
-            <div id="weatherPanel"></div>
+            <div id="weatherPanel">
+            </div>
         </div>
     </div>
     </div>
@@ -107,15 +122,26 @@
             const longitude = locData.longitude;
 
             try {
-                const url = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true&timezone=auto`;
+                const url = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true&timezone=auto&current=precipitation`;
+                const precipurl= 'https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=precipitation';
+                
                 const response = await fetch(url);
                 if (!response.ok) {
                     console.log("Error: Could not connect to API");
                     return;
                 }
 
+
+                const precipResponse = await fetch(precipurl);
+                const precipJSON = await precipResponse.json();
+
                 const json = await response.json();
                 const weather = json.current_weather;
+
+                const precipcurrent = precipJSON.current;
+                const precip = precipcurrent.precipitation;
+
+                const ameriPrecip = precip / 25.4;
 
                 const time = weather.time;
                 const temperature = weather.temperature;
@@ -124,6 +150,31 @@
                 const americanTemp = Math.floor(((temperature * 1.8)+32)*100)/100;
                 const americanMile = Math.floor((windSpeed/1.609) * 100)/100;
 
+                console.log(json);
+                console.log(precipJSON);
+
+                
+                
+                let swimCond = "";
+                
+                
+                function checkSwim(precip, temperature, swimCond){
+                    if (precip > 10 || temperature < 25 ){
+                        swimCond = " not";
+                        return swimCond;
+                    }
+                    if (precip < 10 || temperature >25){
+                        swimCond = " ";
+                        return swimCond; 
+                    }
+                }
+
+                swimCond = checkSwim(precip, temperature, swimCond);
+
+                const myImage = new Image(150, 150);
+                myImage.src = "erjgheruigrtuihgrt.png";
+
+                
 
                 const weatherInfo = `
                     <b>Weather Info:</b><br>
@@ -132,11 +183,19 @@
                     Temperature (C): ${temperature} °C<br>
                     Tempurature (F): ${americanTemp} °F<br>
                     Wind Speed (Kilometers): ${windSpeed} km/h<br>
-                    Wind Speed (Miles): ${americanMile} Mph
-                `;
+                    Wind Speed (Miles): ${americanMile} Mph<br>
+                    precipitation (mm): ${precip} mm <br>
+                    precipitation (inches): ${ameriPrecip} in
+                    <br> <br>
+                    <h2>right now is${swimCond} <br> a good time to <br> go swimming <br> at   ${location}</h2>
+                `
+                const birdImg = document.getElementById('birdImg');
+                
 
                 const weatherPanel = document.getElementById('weatherPanel');
                 weatherPanel.innerHTML = weatherInfo;
+                weatherPanel.appendChild(myImage);
+                
 
             } catch (err) {
                 console.error(err);
