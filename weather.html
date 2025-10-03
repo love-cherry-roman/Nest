@@ -172,7 +172,6 @@
                 swimCond = checkSwim(precip, temperature, swimCond);
 
                 const myImage = new Image(150, 150);
-                myImage.src = "erjgheruigrtuihgrt.png";
 
                 
 
@@ -187,16 +186,28 @@
                     precipitation (mm): ${precip} mm <br>
                     precipitation (inches): ${ameriPrecip} in
                     <br> <br>
-                    <h2>right now is${swimCond} <br> a good time to <br> go swimming <br> at   ${location}</h2>
+                    <h2>right now is${swimCond} <br> a good time to <br> go swimming <br> in  ${location}</h2>
                 `
-                const birdImg = document.getElementById('birdImg');
                 
+                myImage.src = "erjgheruigrtuihgrt.png";
+
 
                 const weatherPanel = document.getElementById('weatherPanel');
                 weatherPanel.innerHTML = weatherInfo;
-                weatherPanel.appendChild(myImage);
-                
 
+                if (weather.is_day == 1 && (precip < 10 && temperature > 22)){
+                    weatherPanel.appendChild(myImage);
+                }
+                if (weather.is_day == 0){
+                    const Bird = new Image(150,150);
+                    Bird.src = "sleepybird.png";
+                    weatherPanel.appendChild(Bird);
+                }
+                if (weather.is_day == 1 && temperature < 22 ){
+                    const Bird = new Image(150,150);
+                    Bird.src = "frozenbird.png";
+                    weatherPanel.appendChild(Bird);
+                }
             } catch (err) {
                 console.error(err);
             }
