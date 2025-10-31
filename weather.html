@@ -76,6 +76,7 @@
             margin-top: 10px;
             flex-grow: 1;
             font-size: 14px;
+            height:160%;
         }
         #weatherPanel img{
             margin-left:170px;
@@ -106,130 +107,108 @@
 
     <script>
         document.getElementById('enter').addEventListener('click', async () => {
-            const location = document.getElementById('textfield').value.trim();
-            if (location.toLowerCase() === "no") {
-                window.close();
-                return;
-            }
+    const location = document.getElementById('textfield').value.trim();
+    if (location.toLowerCase() === "no") {
+        window.close();
+        return;
+    }
 
-            const locData = await getLocationData(location);
-            if (!locData) {
-                alert("Location not found.");
-                return;
-            }
+    const locData = await getLocationData(location);
+    if (!locData) {
+        alert("Location not found.");
+        return;
+    }
 
-            const latitude = locData.latitude;
-            const longitude = locData.longitude;
+    const latitude = locData.lat;
+    const longitude = locData.lon;
 
-            try {
-                const url = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true&timezone=auto&current=precipitation`;
-                const precipurl= 'https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=precipitation';
-                
-                const response = await fetch(url);
-                if (!response.ok) {
-                    console.log("Error: Could not connect to API");
-                    return;
-                }
+    try {
+        const apiKey = "dc5b3d498315078db350ba01d461365b";
+        const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
 
-
-                const precipResponse = await fetch(precipurl);
-                const precipJSON = await precipResponse.json();
-
-                const json = await response.json();
-                const weather = json.current_weather;
-
-                const precipcurrent = precipJSON.current;
-                const precip = precipcurrent.precipitation;
-
-                const ameriPrecip = precip / 25.4;
-
-                const time = weather.time;
-                const temperature = weather.temperature;
-                const windSpeed = weather.windspeed;
-
-                const americanTemp = Math.floor(((temperature * 1.8)+32)*100)/100;
-                const americanMile = Math.floor((windSpeed/1.609) * 100)/100;
-
-                console.log(json);
-                console.log(precipJSON);
-
-                
-                
-                let swimCond = "";
-                
-                
-                function checkSwim(precip, temperature, swimCond){
-                    if (precip > 10 || temperature < 25 ){
-                        swimCond = " not";
-                        return swimCond;
-                    }
-                    if (precip < 10 || temperature >25){
-                        swimCond = " ";
-                        return swimCond; 
-                    }
-                }
-
-                swimCond = checkSwim(precip, temperature, swimCond);
-
-                const myImage = new Image(150, 150);
-
-                
-
-                const weatherInfo = `
-                    <b>Weather Info:</b><br>
-                    Date: ${time.slice(0,10)}<br>
-                    Time: ${time.slice(11,16)}<br>
-                    Temperature (C): ${temperature} °C<br>
-                    Tempurature (F): ${americanTemp} °F<br>
-                    Wind Speed (Kilometers): ${windSpeed} km/h<br>
-                    Wind Speed (Miles): ${americanMile} Mph<br>
-                    precipitation (mm): ${precip} mm <br>
-                    precipitation (inches): ${ameriPrecip} in
-                    <br> <br>
-                    <h2>right now is${swimCond} <br> a good time to <br> go swimming <br> in  ${location}</h2>
-                `
-                
-                myImage.src = "erjgheruigrtuihgrt.png";
-
-
-                const weatherPanel = document.getElementById('weatherPanel');
-                weatherPanel.innerHTML = weatherInfo;
-
-                if (weather.is_day == 1 && (precip < 10 && temperature > 22)){
-                    weatherPanel.appendChild(myImage);
-                }
-                if (weather.is_day == 0){
-                    const Bird = new Image(150,150);
-                    Bird.src = "sleepybird.png";
-                    weatherPanel.appendChild(Bird);
-                }
-                if (weather.is_day == 1 && temperature < 22 ){
-                    const Bird = new Image(150,150);
-                    Bird.src = "frozenbird.png";
-                    weatherPanel.appendChild(Bird);
-                }
-            } catch (err) {
-                console.error(err);
-            }
-        });
-
-        async function getLocationData(location) {
-            const formattedLocation = location.replaceAll(" ", "+");
-            const url = `https://geocoding-api.open-meteo.com/v1/search?name=${formattedLocation}&count=1&language=en&format=json`;
-
-            try {
-                const response = await fetch(url);
-                if (!response.ok) {
-                    console.log("Error: Location API failed");
-                    return null;
-                }
-                const json = await response.json();
-                return json.results[0];
-            } catch (err) {
-                console.error(err);
-                return null;
-            }
+        const response = await fetch(url);
+        if (!response.ok) {
+            console.log("Error: Could not connect to OpenWeatherMap API");
+            return;
         }
+
+        const json = await response.json();
+        const weather = json.weather[0];
+        const main = json.main;
+        const wind = json.wind;
+        const time = new Date(json.dt * 1000).toISOString();
+        const temperature = main.temp;
+        const windSpeed = wind.speed;
+        const precip = json.rain ? json.rain["1h"] || 0 : 0;
+        const ameriPrecip = (precip / 25.4).toFixed(2);
+        const americanTemp = ((temperature * 1.8) + 32).toFixed(2);
+        const americanMile = (windSpeed / 1.609).toFixed(2);
+
+        let swimCond = "";
+        function checkSwim(precip, temperature) {
+            return (precip > 10 || temperature < 25) ? " not" : " ";
+        }
+
+        swimCond = checkSwim(precip, temperature);
+
+        const myImage = new Image(150, 150);
+        myImage.src = "erjgheruigrtuihgrt.png";
+
+        const weatherInfo = `
+            <b>Weather Info:</b><br>
+            Date: ${time.slice(0,10)}<br>
+            Time: ${time.slice(11,16)}<br>
+            Temperature (C): ${temperature} °C<br>
+            Temperature (F): ${americanTemp} °F<br>
+            Wind Speed (Kilometers): ${windSpeed} km/h<br>
+            Wind Speed (Miles): ${americanMile} Mph<br>
+            Precipitation (mm): ${precip} mm<br>
+            Precipitation (inches): ${ameriPrecip} in
+            <br><br>
+            <h2>Right now is${swimCond} a good time to go swimming in ${location}</h2>
+        `;
+
+        const weatherPanel = document.getElementById('weatherPanel');
+        weatherPanel.innerHTML = weatherInfo;
+
+        const isDay = json.sys.sunrise < json.dt && json.dt < json.sys.sunset;
+
+        if (isDay && precip < 10 && temperature > 22) {
+            weatherPanel.appendChild(myImage);
+        } else if (!isDay) {
+            const Bird = new Image(150, 150);
+            Bird.src = "sleepybird.png";
+            weatherPanel.appendChild(Bird);
+        } else if (isDay && temperature < 22) {
+            const Bird = new Image(150, 150);
+            Bird.src = "frozenbird.png";
+            weatherPanel.appendChild(Bird);
+        }
+
+    } catch (err) {
+        console.error(err);
+    }
+});
+
+async function getLocationData(location) {
+    const apiKey = "dc5b3d498315078db350ba01d461365b";
+    const formattedLocation = location.replaceAll(" ", "+");
+    const url = `https://api.openweathermap.org/geo/1.0/direct?q=${formattedLocation}&limit=1&appid=${apiKey}`;
+
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            console.log("Error: Location API failed");
+            return null;
+        }
+        const json = await response.json();
+        return json[0];
+    } catch (err) {
+        console.error(err);
+        return null;
+    }
+}
+
     </script>
 </body>
 </html>
