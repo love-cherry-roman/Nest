@@ -76,7 +76,6 @@
             margin-top: 10px;
             flex-grow: 1;
             font-size: 14px;
-            height:160%;
         }
         #weatherPanel img{
             margin-left:170px;
@@ -88,6 +87,7 @@
             color: #000000;
             text-align: left;
             font-size: 150%;
+            width:50%;
         }
     </style>
 </head>
@@ -137,9 +137,11 @@
         const main = json.main;
         const wind = json.wind;
         const time = new Date(json.dt * 1000).toISOString();
+
         const temperature = main.temp;
         const windSpeed = wind.speed;
         const precip = json.rain ? json.rain["1h"] || 0 : 0;
+
         const ameriPrecip = (precip / 25.4).toFixed(2);
         const americanTemp = ((temperature * 1.8) + 32).toFixed(2);
         const americanMile = (windSpeed / 1.609).toFixed(2);
