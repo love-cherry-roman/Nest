@@ -1,365 +1,99 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Big+Shoulders:opsz,wght@10..72,100..900&family=Comfortaa:wght@300..700&family=Corben:wght@400;700&display=swap" rel="stylesheet">   <style>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
+   <style>
+        
+    
         h1, h2, h3,h4 ,h5 ,h6,p,a,b  {
-            font-family: "Archivo Narrow", sans-serif;
+            font-family: serif;
             font-optical-sizing: auto;
             font-style: normal;
+            color:#f0f8ffcb;
+        }
+        nav {
+            text-align:center;
+            background-color: #000000e1;
+            box-shadow: 0px 0px 5px 2px #8f8f8f;
+            border: #f0f8ff solid 1px;
+            border-radius:25px 25px 0px 0px;
         }
         body{
-            background-image: url("https://m.media-amazon.com/images/I/81vYmZMz6CL.jpg");
+            background-image: url("https://raw.githubusercontent.com/love-cherry-roman/Nest/81cf17e1ff7b19ef63d5443dccd129af36cb54d5/Untitled79_20260519201942.png");
             background-repeat:repeat;
             background-size:25%;
         }
         .divdiv{
-            background-color:#00000090;
-            margin-left:-100px;
-            margin-right:-100px;
-            margin-top:-30px;
-        }
-        #name{
-            font-size:175px;
-            margin-bottom:-50px;
-            margin-top: 75px;
-            margin-left:10px;
-        }
-        .maindiv{
-            margin-top:-100px;
-            padding-top:25px;
-            width:475px;
-            position:static;
-            margin:auto;
-            left:50%;
-            right:50%;
-            transform: translate(-50%);  
-            HEIGHT:50000px;
-            color:white;
-            top:-100px;
-        }
-        #icon1{
-            width:500px;
-            position:absolute;
-            left:50%;
-            right:50%;
-            transform: translate(-50%);
-            color:white;
-            z-index:50;
-            width:25%;
-            height:25%;
-            margin-top:35px;
-        }
-        #starstar{
-            margin-top:-130px;
-            margin-bottom:-170px;
-            margin-left:-40px;
-            height:250px;
-            position:absolute;
-            z-index: 54;
-            
-        }
-        #starstar2{
-            
-            margin-top:-85px;
-            margin-bottom:-200px;
-            margin-left:40px;
-            position: absolute;
-            z-index: 34;
-            height:250px;
-        }
-        #bio{
-            font-size: 4.25em;
-            width:500px;
-            margin-top: 50px;
-            top:290px;
-            position: absolute;
-        }
-        .pfp{
-            position:absolute;
-            z-index: 30;
-            width:300px;
-            height:300px;
-            left:700px;
-            top:150px;
-            border-radius: 50px;
-        }
-        .otherbio1{
-            font-size: 2em;
-            margin-top:-35px;
-            margin-bottom:-25px;
-            top:475px;
-            
-            position:absolute;
-        }
-        .otherbio2{
-            font-size: 30px;
-            z-index: 74;
-            width:400px;
-            top:435px;
-            position: absolute;
-            text-align:center;
-        }
-        .otherbio3{
-            font-size: 30px;
-            z-index: 74;
-            width: 400px;
-            top: 650px;
-            position:absolute;
-            text-align: center;
-        }
-        .arrow-me{
-            width:150px;
-            height:150px;
-            position:absolute;
-            z-index: 93;
-            left:550px;
-            top:150px;
-        }
-        .starsyayaya{
-            width:190px;
-            height:190px;
-            position:absolute;
-            z-index: 92;
-            left:-31px;
-            top:110px;
-        }
-        .star1{
-            position:absolute;
-            z-index: 109;
-            width:145px;
-            height:145px;
-            left:200px;
-            top:250px;
-        }
-        .staragain{
-            position:absolute;
-            z-index: 109;
-            width:220px;
-            height:220px;
-            left:370px;
-            top:35px;
-        }
-        .loonaicon{
-            
-            position:absolute;
-            z-index: 102;
-            width:150px;
-            height:150px;
-            left:500px;
-            top:300px;
-        }
-        .textforsocials{
-            position: absolute;
-            z-index: 101;
-            left:745px;
-            height:200px;
-            width:200px;
-            top:175px;
-            opacity:0;
-            transition: opacity 0.5s ease-in;
-        }
-        .overlay:hover .textforsocials{
-            opacity:1;
-            transition: opacity 0.5s ease-in;
-        }
-        .overlay:hover:after .textforsocials{
-            opacity:0;
-        }
-        .tiktok{
-            position:absolute;
-            z-index: 87;
-            width:140px;
-            height:100px;
-            opacity:1;
-            left:850px;
-            opacity:0;
-            top:175px;
-            transition: top 1s ease-out, opacity 1s ease-out;
-            
-        }
-        .overlay:hover .tiktok{
-            opacity:1;
-            top:475px;
-            
-        }
-        
-        .overlay:hover:after .tiktok{
-            opacity:0;
-            top:150px;
-        }
-        .discord{
-            position:absolute;
-            z-index: 87;
-            width:80px;
-            height:80px;
-            opacity:1;
-            left:875px;
-            opacity:0;
-            top:150px;
-            transition: top 1s ease-out, opacity 1s ease-out;
-            
-        }
-        .overlay:hover .discord{
-            opacity:1;
-            top:625px;
-        }
-        
-        .overlay:hover:after .discord{
-            opacity:0;
-            top:150px;
-        }
-        .github{
-            position:absolute;
-            z-index: 87;
-            width:80px;
-            height:80px;
-            opacity:1;
-            left:875px;
-            opacity:0;
-            top:150px;
-            transition: top 1s ease-out, opacity 1s ease-out;
-            
-        }
-        .overlay:hover .github{
-            opacity:1;
-            top:775px;
-        }
-        
-        .overlay:hover:after .github{
-            opacity:0;
-            top:150px;
-        }
-        .spotifyplaylist{
-            width:660px;
-            height:250px;
-            position: absolute;
-            z-index: 44;
-            top:625px;
-        }
-        #dividerthing{
-            top:575px;
-            position:absolute;
-            width:1000px;
-        }
-        .loonathingv{
-            position:absolute;
-            z-index: 89;
-            border: 5px white solid;
-            width:120px;
-            left:700px;
-            top:450px;
-        }
-        .topbar{
-            height:200px;
-            background-color: rgb(34, 34, 34);
-            width:1150px;
-            margin:auto;
-            left:500px;
+            background-color:#000000;
         }
         .divvydiv{
-            top:-75px;
-            position:absolute;
-            left:25px;
-    
-        }
-        .titleforbar{
-            text-align: center;
-            font-size: 50px;
-            color:white;
-        }
-        .dividerforbar{
-            font-size: 50px;
-            position: absolute;
-            z-index: 101;
-            color:white;
-            top:0px;
-        }
-        .home{
-            font-size: 35px;
-            position: static;
-            z-index: 101;
-            color:white;
-            top:70px;
-            left:400px;
-            font-weight: 100;
-            margin-bottom:-35px;
-            margin-top:-25px;
-            margin-left: 150px;
-        }
-        .list{
-            font-size: 40px;
-            position: absolute;
-            z-index: 101;
-            color:white;
-            font-weight: 100;
-            width:400px;
-            top:825px;
-            text-align:center;
-        }
-        #socialss{
-            position: absolute;
-            z-index: 89;
-            left:760px;
-            top:80px;
-            width:500px;
-        }
-        .eliasthingowa{
-            width:150px;
-            height:150px;
-            border:white 5px solid;
-            border-radius: 25%;
-            position: absolute;
-            z-index: 34;
-            top:425px;
-            left:500px;
-        }
-        .stargif{
-            width:150px;
-            height:150px;
-            position: absolute;
-            z-index: 34;
-            top:425px;
-            left:350px;
-        }
-        .namediv{
+          width:1000px;
           position: absolute;
-          top:30px;
+          left: 50%;
+          transform: translate(-50%, 0%);
         }
-        #cbox{
-          position: absolute;
-          width:430px;
-          height:400px;
-          font-size: 75px;
-          left:450px;
-          top:400px;
+
+    .gradient{
+        height:3px;
+        margin-top:15px;
+        margin-bottom:15px;
+        border-radius:7px;
+        border-style: solid;
+        background: linear-gradient(
+            90deg,
+            #000000 0%,
+            #444444 25%,
+            #888888 50%,
+            #b4b4b4 75%,
+            #ffffff 100%
+        );
+        border-color: linear-gradient(
+            90deg,
+            #000000 100%,
+            #444444 75%,
+            #888888 50%,
+            #cccccc 25%,
+            #ffffff 0%
+        );
+    }
+    nav > h1{
+        letter-spacing:10px !important;
+        word-spacing: 10px;
+        font-family: "Cinzel Decorative", serif;
+    }
+    nav > h1 > .he{
+        letter-spacing:27px;
+    }
+
+        .innerDiv {
+            background-color: #000000e1;
+            box-shadow: 0px 0px 5px 2px #8f8f8f;
+            border: #f0f8ff solid 1px;
+            border-radius:0px 0px 25px 25px;
+            width:100%;
+            display:table;
+            table-layout: fixed;
+            box-sizing: content-box;
         }
-        img#java{
-            width:100px;
-            height:100px;
-            border-radius:20%;
-            z-index: 74;
-            top: 725px;
-            left:5px;
-            position: absolute;
+        .col{
+            display: table-cell;
+            vertical-align: top;
         }
-        img#htmllogo{
-            width:100px;
-            height:100px;
-            border-radius:20%;
-            z-index: 74;
-            top: 725px;
-            left:145px;
-            position: absolute;
-        }img#python{
-            width:100px;
-            height:100px;
-            border-radius:20%;
-            z-index: 74;
-            top: 725px;
-            left:290px;
-            position: absolute;
+
+        .col.w-40{
+            width:40%;
+        }
+        .pfp{
+            margin:25px;
+        }
+
+        .pfp > .photo
+        {
+            width:200px;
+            border: #f0f8ff solid 4px;
+            border-radius: 5px;
         }
         
     </style>
@@ -370,44 +104,28 @@
     <div class = "divdiv">
         <div class = "maindiv">
             <div class="divvydiv">
-              <div class = namediv>
-                <h1 id="name">Roman</h1>
-                <img class="star1" src="staragainyayahhujfuoh.png">
-                <img class = "starsyayaya" src="saaaaiuohiohhio.png">
-                <img class="staragain" src="Untitled21_20250610205815.png">
-                </div>
-                <div class="pfpall">
-                    <img class="arrow-me" src="Untitled21_20250610201932.png">
-                    <img class="loonaicon" src="loona gifd pls word.gif">
-                    <h1 class = "otherbio" id="socialss">click 4 socials</h1>
-                    <img class = "pfp" src="https://cdn.discordapp.com/avatars/832344471555276870/3dba36c4d76f605b59e78a1ab5eefa9a.webp?size=1024">
-                    <div class="overlay">
-                        <img class="textforsocials" src="text.png" alt="hi">
-                        <a href="https://www.tiktok.com/@love.cherry.abortion">
-                            <img class="tiktok" src="tiktok-removebg-preview (1).png"> 
-                        </a>      
-
-                        <a href="https://discordapp.com/users/832344471555276870">
-                            <img class="discord" src="discord.png">   
-                        </a>        
-                        <a href="https://github.com/love-cherry-roman">
-                            <img class="github" src="gitforreal.png">   
-                        </a>         
+                <nav>
+                
+            <h1>Love C<span class = "he">he</span>rry Roman</h1>
+                </nav>
+                <hr class = gradient>
+                <div class = "innerDiv">
+                    <div class="col w-40 left">
+                        <div class="pfp">
+                            <img class="photo" src="https://cdn.discordapp.com/avatars/832344471555276870/5f2dd956f4aa3b3b6c23b46e1c8dddf2.webp?size=1024">
+                        
+                        <h2>Mood: hiiiiiiiiii</h2>
+                        </div>
                     </div>
+                    <div class="col right">
+                        <h1>Work in Progress...</h1>
+                        <progress style="width:300px;"></progress>
+                    </div>
+
                 </div>
-                <h2 id="bio"> 16, INTJ</h2>
-                <h2 class = "otherbio1">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</h2>
-                <h2 class = "otherbio2">Hi I'm roman uhhhh i like kpop and coding and stuff, i ult loona, f(x), sistar, nmixx, and others, I like Evangelion, mahoyome, touhou, and chiikawa too </h2>
-                <br>
-                <h2 class = "otherbio3">~~~~ I know... ~~~~</h2>
-                <div>
-                <img src = "https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/1200/external-java-is-a-general-purpose-programming-language-that-is-class-based-logo-shadow-tal-revivo.jpg" id = "java">
-                <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEc9A_S6BPxCDRp5WjMFEfXrpCu1ya2OO-Lw&s" id = "htmllogo">
-                <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/2048px-Python-logo-notext.svg.png" id = "python">
-                </div>
-                <h2 class="list"></h2><a class="list" href="https://love-cherry-roman.github.io/Nest/list">list for all my sites</a></h2>
-                </div>
-                <iframe src="https://www3.cbox.ws/box/?boxid=3532547&boxtag=JN8usx" width="100%" height="1500" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto" id="cbox"></iframe>	</div>
+                
+            </div>
+        </div>
     </div>
 </body>
 </html>
