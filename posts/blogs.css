@@ -248,3 +248,18 @@
             margin: auto;
             font-size:17px;
         }
+        .musicdiv > h3
+        {
+            font-size:15px;
+            margin:0px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color:rgb(32, 32, 28);
+        }
+        .musicdiv > hr
+        {
+            font-size:12.5px;
+            margin:5px;
+            width:250px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            
+        }

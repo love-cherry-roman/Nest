@@ -1,6 +1,6 @@
 
     
-        h1, h2, h3,h4 ,h5 ,h6,p,b, span  {
+        h1, h2, h3,h4 ,h5 ,h6,p,b, span, marquee  {
             font-family: monospace;
             font-optical-sizing: auto;
             font-style: normal;
@@ -241,15 +241,29 @@
         }
         .headermarquee
         {
-                        
-            animation: marq 33s linear;
-            animation-iteration-count: infinite;
-            display: flex;
-            flex-direction: row;
-            width: 449rem;
-            text-rendering: optimizespeed;
+            background-image:none;
+            background:transparent;
+            width:100%;
+            display: block;
+            margin: auto;
+            font-size:17px;
         }
-@keyframes marq {
-  from{transform: translate(920px, 0px); }
-  to{transform: translate(-3200px, 0px); }
-}
+        #statuscafe {
+            padding: .5em;
+            background-image:url(https://i.pinimg.com/736x/ce/da/e1/cedae14c724379c2a9e8aaa99a6fdf93.jpg);
+            color
+        }
+        #statuscafe-username {
+            margin-bottom: .5em;
+        }
+        #statuscafe-content {
+            margin: 0 1em 0.5em 1em;
+        }
+        #statuscafeborder
+        {
+            
+            border-style: solid;
+            border-width: 11px;
+            border-image:url(https://64.media.tumblr.com/c6f6ebf27b73c4f4fdf353f4647bc3e5/b7a2535628e85ed9-2b/s250x400/a22f17b04b257812a6f72e8c790e938d69b091bb.pnj) 15% round;
+            
+        }
